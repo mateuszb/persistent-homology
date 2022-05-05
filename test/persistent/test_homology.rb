@@ -17,7 +17,7 @@ class Persistent::TestHomology < Minitest::Test
     refute_empty peaks
   end
 
-  def test_of_simple_sequence
+  def test_of_simple_sequence_2
     peaks = Persistent::Homology.compute([1.0, 0.0, 0.0, 1.0])
     refute_empty peaks
   end

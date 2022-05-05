@@ -3,6 +3,7 @@
 require_relative "homology/version"
 
 module Persistent
+  # This module is used for computing persistent homology of a time series signal
   module Homology
 
     class Error < StandardError; end
