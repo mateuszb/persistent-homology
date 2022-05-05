@@ -12,7 +12,7 @@ module Persistent
 
       # Index to peak map
       index_to_peak = Array.new(sequence.length)
-      indices = Range.new(0, sequence.length - 1).to_a.sort.reverse
+      indices = Range.new(0, sequence.length - 1).to_a.sort_by { |i| sequence[i] }.reverse
 
       indices.each do |idx|
         left_done = ((idx.positive? and !index_to_peak[idx - 1].nil?))
@@ -54,6 +54,8 @@ module Persistent
 
     # A class to keep track of peaks in the persistent homology
     class Peak
+      attr_accessor(:left, :right, :born, :died)
+
       def initialize(start_index)
         @born = @left = @right = start_index
         @died = nil
