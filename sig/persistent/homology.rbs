@@ -1,0 +1,12 @@
+module Persistent
+  module Homology
+    VERSION: String
+    # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+
+    public def compute: ([Float]) -> [Peak]
+
+    class Peak
+
+    end
+  end
+end
